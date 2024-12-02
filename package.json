@@ -8,7 +8,7 @@
     "build": "parcel build index.html --no-scope-hoist --dist-dir ./dist"
     
   },
-  "author": "Maksym Lavrov",
+  "author": "Ynnyannah Vea Cruz",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
