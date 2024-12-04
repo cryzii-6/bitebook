@@ -1,0 +1,30 @@
+name: Compile SCSS to CSS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Compile SCSS
+      run: |
+        npm run sass
+
+    - name: Push CSS to GitHub
+      run: |
+        git config --global user.name "Your Name"
+        git config --global user.email "your-email@example.com"
+        git add css/main.css
+        git commit -m "Compile SCSS"
+        git push
